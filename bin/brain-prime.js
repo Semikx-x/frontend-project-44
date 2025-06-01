@@ -40,3 +40,4 @@ while (correctAnswers < roundsToWin) {
 }
 
 console.log(`Congratulations, ${name}!`);
+
