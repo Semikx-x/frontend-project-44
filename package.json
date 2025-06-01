@@ -13,6 +13,12 @@
     "readline-sync": "^1.4.10"
   },
   "bin": {
-  "brain-games": "bin/brain-games.js"
-}
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0"
+  }
 }
