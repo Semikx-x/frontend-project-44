@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
-export default prime => {
+export default prime = () => {
 
   const isPrime = (num) => {
     if (num <= 1) return 'no'
@@ -18,7 +18,7 @@ export default prime => {
   function askQuestion() {
     number1 = Math.floor(Math.random() * 100)
     console.log(`Question: ${number1}`)
-    return readlineSync.question('Your answer: ').toLowerCase() 
+    return readlineSync.question('Your answer: ').toLowerCase()
   }
 
   function makeCorrectAnswer() {
@@ -28,7 +28,5 @@ export default prime => {
   runGame(
     'Answer "yes" if given number is prime. Otherwise answer "no".',
     askQuestion,
-    makeCorrectAnswer
-  )
+    makeCorrectAnswer)
 }
-

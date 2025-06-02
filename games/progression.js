@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
-export default progression => {
+export default progression = () => {
   const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
 
   const generateProgression = (length, start, step) => {
@@ -22,7 +22,6 @@ export default progression => {
       .join(' ')
     console.log(`Question: ${question}`)
     return readlineSync.question('Your answer: ').toLowerCase()
-
   }
 
   function makeCorrectAnswer() {
@@ -32,7 +31,5 @@ export default progression => {
   runGame(
     'What number is missing in the progression?',
     askQuestion,
-    makeCorrectAnswer
-  )
-
+    makeCorrectAnswer)
 }
