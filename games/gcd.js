@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
-export default gcd = () => {
+export default function gcd() {
   const nod = (num1, num2) => {
     if (num2 !== 0) {
       const k = num1 % num2

@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
-export default calc = () => {
+export default function calc() {
 
   const znaki = ['+', '-', '*']
   let number1

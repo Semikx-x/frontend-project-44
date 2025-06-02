@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
-export default even = () => {
+export default function even() {
   function isEven(num) {
     return num % 2 === 0
   }
