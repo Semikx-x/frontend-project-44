@@ -13,9 +13,10 @@ export default function prime() {
   }
 
   let number1
+  const maxRandom = 100
 
   function askQuestion() {
-    number1 = Math.floor(Math.random() * 100)
+    number1 = Math.floor(Math.random() * maxRandom)
     console.log(`Question: ${number1}`)
     return readlineSync.question('Your answer: ').toLowerCase()
   }

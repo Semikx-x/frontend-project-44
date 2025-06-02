@@ -6,11 +6,12 @@ export default function calc() {
   let number1
   let number2
   let random
+  const maxRandom = 100 
 
   function askQuestion() {
-    number1 = Math.floor(Math.random() * 100)
-    number2 = Math.floor(Math.random() * 100)
-    random = Math.floor(Math.random() * 3)
+    number1 = Math.floor(Math.random() * maxRandom)
+    number2 = Math.floor(Math.random() * maxRandom)
+    random = Math.floor(Math.random() * znaki.length)
 
     console.log(`Question: ${number1} ${znaki[random]} ${number2}`)
     return readlineSync.question('Your answer: ').toLowerCase()

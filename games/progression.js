@@ -9,11 +9,17 @@ export default function progression() {
   }
 
   let correctAnswer
+  const minLength = 5
+  const maxLength = 10
+  const minStart = 1
+  const maxStart = 20
+  const minStep = 2
+  const maxStep = 5
 
   function askQuestion() {
-    const length = getRandomInt(5, 10)
-    const start = getRandomInt(1, 20)
-    const step = getRandomInt(2, 5)
+    const length = getRandomInt(minLength, maxLength)
+    const start = getRandomInt(minStart, maxStart)
+    const step = getRandomInt(minStep, maxStep)
     const progression = generateProgression(length, start, step)
     const hiddenIndex = getRandomInt(0, length - 1)
     correctAnswer = progression[hiddenIndex]

@@ -6,9 +6,10 @@ export default function even() {
     return num % 2 === 0
   }
   let number
+  const maxRandom = 100
 
   function askQuestion() {
-    number = Math.floor(Math.random() * 100)
+    number = Math.floor(Math.random() * maxRandom)
     console.log(`Question: ${number}`)
     return readlineSync.question('Your answer: ').toLowerCase()
   }

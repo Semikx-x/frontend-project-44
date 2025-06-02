@@ -12,10 +12,11 @@ export default function gcd() {
 
   let number1
   let number2
+  const maxRandom = 100
 
   function askQuestion() {
-    number1 = Math.floor(Math.random() * 100)
-    number2 = Math.floor(Math.random() * 100)
+    number1 = Math.floor(Math.random() * maxRandom)
+    number2 = Math.floor(Math.random() * maxRandom)
     console.log(`Question: ${number1} ${number2}`)
     return readlineSync.question('Your answer: ').toLowerCase()
   }
