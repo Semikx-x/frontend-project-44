@@ -6,7 +6,7 @@ export default function calc() {
   let number1
   let number2
   let random
-  const maxRandom = 100 
+  const maxRandom = 100
 
   function askQuestion() {
     number1 = Math.floor(Math.random() * maxRandom)
