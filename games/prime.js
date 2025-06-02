@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
 export default function prime() {
-
   const isPrime = (num) => {
     if (num <= 1) return 'no'
     if (num === 2) return 'yes'
