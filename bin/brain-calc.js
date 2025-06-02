@@ -10,7 +10,6 @@ console.log('What is the result of the expression?')
 const znaki = ['+', '-', '*']
 
 const primer = (num1, random, num2) => {
-
   if (random === 0) {
     return num1 + num2
   }
@@ -38,7 +37,8 @@ while (correctAnswers < roundsToWin) {
   if (answer == correctAnswer) {
     console.log('Correct!')
     correctAnswers += 1
-  } else {
+  } 
+  else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
     console.log(`Let's try again, ${name}!`)
     process.exit(0)
