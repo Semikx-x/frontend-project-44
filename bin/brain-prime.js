@@ -26,7 +26,6 @@ while (correctAnswers < roundsToWin) {
 
   const correctAnswer = isPrime(number1)
 
-
   if (answer == correctAnswer) {
     console.log('Correct!')
     correctAnswers += 1

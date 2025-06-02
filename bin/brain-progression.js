@@ -16,8 +16,8 @@ const playRound = () => {
   const hiddenIndex = getRandomInt(0, length - 1)
   const correctAnswer = progression[hiddenIndex]
   const question = progression
-  .map((num, idx) => (idx === hiddenIndex ? '..' : num))
-  .join(' ')
+    .map((num, idx) => (idx === hiddenIndex ? '..' : num))
+    .join(' ')
   console.log(`Question: ${question}`)
   const answer = readlineSync.question('Your answer: ')
   if (answer === String(correctAnswer)) {
