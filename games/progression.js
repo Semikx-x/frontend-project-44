@@ -9,14 +9,14 @@ export default function progression() {
   }
 
   let correctAnswer
-  const minLength = 5
-  const maxLength = 10
-  const minStart = 1
-  const maxStart = 20
-  const minStep = 2
-  const maxStep = 5
 
-  function askQuestion() {
+  function generateQuestionAndAnswer() {
+    const minLength = 5
+    const maxLength = 10
+    const minStart = 1
+    const maxStart = 20
+    const minStep = 2
+    const maxStep = 5
     const length = getRandomInt(minLength, maxLength)
     const start = getRandomInt(minStart, maxStart)
     const step = getRandomInt(minStep, maxStep)
@@ -26,16 +26,11 @@ export default function progression() {
     const question = progression
       .map((num, idx) => (idx === hiddenIndex ? '..' : num))
       .join(' ')
-    console.log(`Question: ${question}`)
-    return readlineSync.question('Your answer: ').toLowerCase()
+    return { question, correctAnswer }
   }
 
-  function makeCorrectAnswer() {
-    return correctAnswer
-  }
 
   runGame(
     'What number is missing in the progression?',
-    askQuestion,
-    makeCorrectAnswer)
+    generateQuestionAndAnswer)
 }

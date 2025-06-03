@@ -1,25 +1,20 @@
-import readlineSync from 'readline-sync'
+import readlineSync, { question } from 'readline-sync'
 import runGame from '../src/index.js'
 
 export default function even() {
   function isEven(num) {
     return num % 2 === 0
   }
-  let number
-  const maxRandom = 100
-
-  function askQuestion() {
-    number = Math.floor(Math.random() * maxRandom)
-    console.log(`Question: ${number}`)
-    return readlineSync.question('Your answer: ').toLowerCase()
-  }
-
-  function makeCorrectAnswer() {
-    return isEven(number) ? 'yes' : 'no'
+  
+  function generateQuestionAndAnswer() {
+    const maxRandom = 100
+    let number = Math.floor(Math.random() * maxRandom)
+    const question = number.toString()
+    const correctAnswer = isEven(number) ? 'yes' : 'no'
+    return { question, correctAnswer }
   }
 
   runGame(
     'Answer "yes" if the number is even, otherwise answer "no".',
-    askQuestion,
-    makeCorrectAnswer)
+    generateQuestionAndAnswer)
 }

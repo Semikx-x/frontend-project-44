@@ -10,23 +10,17 @@ export default function gcd() {
     return num1
   }
 
-  let number1
-  let number2
-  const maxRandom = 100
-
-  function askQuestion() {
-    number1 = Math.floor(Math.random() * maxRandom)
-    number2 = Math.floor(Math.random() * maxRandom)
-    console.log(`Question: ${number1} ${number2}`)
-    return readlineSync.question('Your answer: ').toLowerCase()
+  function generateQuestionAndAnswer() {
+    const maxRandom = 100
+    let number1 = Math.floor(Math.random() * maxRandom)
+    let number2 = Math.floor(Math.random() * maxRandom)
+    const question = `${number1} ${number2}`
+    const correctAnswer = nod(number1, number2)
+    return { question, correctAnswer }
   }
 
-  function makeCorrectAnswer() {
-    return nod(number1, number2)
-  }
 
   runGame(
     'Find the greatest common divisor of given numbers',
-    askQuestion,
-    makeCorrectAnswer)
+    generateQuestionAndAnswer)
 }
