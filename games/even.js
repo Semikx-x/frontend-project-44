@@ -1,11 +1,10 @@
-import readlineSync, { question } from 'readline-sync'
 import runGame from '../src/index.js'
 
 export default function even() {
   function isEven(num) {
     return num % 2 === 0
   }
-  
+
   function generateQuestionAndAnswer() {
     const maxRandom = 100
     let number = Math.floor(Math.random() * maxRandom)

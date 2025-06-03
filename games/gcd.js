@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
 export default function gcd() {
@@ -18,7 +17,6 @@ export default function gcd() {
     const correctAnswer = nod(number1, number2)
     return { question, correctAnswer }
   }
-
 
   runGame(
     'Find the greatest common divisor of given numbers',

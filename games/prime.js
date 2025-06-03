@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
 export default function prime() {
@@ -21,7 +20,7 @@ export default function prime() {
   }
 
   function makeCorrectAnswer(num) {
-    return isPrime(num)  ? 'yes' : 'no'
+    return isPrime(num) ? 'yes' : 'no'
   }
 
   runGame(

@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
 export default function progression() {
@@ -28,7 +27,6 @@ export default function progression() {
       .join(' ')
     return { question, correctAnswer }
   }
-
 
   runGame(
     'What number is missing in the progression?',

@@ -1,8 +1,6 @@
-import readlineSync from 'readline-sync'
 import runGame from '../src/index.js'
 
 export default function calc() {
-
   function generateQuestionAndAnswer() {
     const znaki = ['+', '-', '*']
     const maxRandom = 100
