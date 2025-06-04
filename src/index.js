@@ -7,9 +7,9 @@ export default function runGame(gameInfo, generateQuestionAndAnswer) {
   console.log(gameInfo)
 
   const roundsToWin = 3
-  let correctAnswers = 0
 
-  while (correctAnswers < roundsToWin) {
+
+  for (let i = 0; i < roundsToWin; i += 1) {
     const { question, correctAnswer } = generateQuestionAndAnswer()
 
     console.log(`Question: ${question}`)
@@ -17,12 +17,10 @@ export default function runGame(gameInfo, generateQuestionAndAnswer) {
 
     if (answer == correctAnswer) {
       console.log('Correct!')
-      correctAnswers += 1
     }
     else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
-      console.log(`Let's try again, ${name}!`)
-      process.exit(0)
+      return console.log(`Let's try again, ${name}!`)
     }
   }
 
