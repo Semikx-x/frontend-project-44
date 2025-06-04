@@ -16,7 +16,6 @@ function generateQuestionAndAnswer() {
 }
 
 export default function even() {
-
   runGame(
     'Answer "yes" if the number is even, otherwise answer "no".',
     generateQuestionAndAnswer)

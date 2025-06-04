@@ -29,7 +29,6 @@ function generateQuestionAndAnswer() {
 }
 
 export default function calc() {
-
   runGame(
     'What is the result of the expression?',
     generateQuestionAndAnswer)

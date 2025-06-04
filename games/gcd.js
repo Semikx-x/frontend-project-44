@@ -21,7 +21,6 @@ function generateQuestionAndAnswer() {
 }
 
 export default function gcd() {
-
   runGame(
     'Find the greatest common divisor of given numbers',
     generateQuestionAndAnswer)

@@ -8,7 +8,6 @@ export default function runGame(gameInfo, generateQuestionAndAnswer) {
 
   const roundsToWin = 3
 
-
   for (let i = 0; i < roundsToWin; i += 1) {
     const { question, correctAnswer } = generateQuestionAndAnswer()
 
